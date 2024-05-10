@@ -45,15 +45,18 @@ export default function MainPage() {
 
   const [buttonText, setButtonText] = useState("user"); // 버튼 텍스트 상태 관리
   const [buttonColor, setButtonColor] = useState("primary"); // 버튼 배경 색깔 상태 관리
+  const [imgPath, setImg] = useState("/img/TRASHHUNTER.jpeg"); // 버튼 배경 색깔 상태 관리
 
   const handleClick = () => {
     // 버튼 클릭 이벤트 처리
     if (buttonText === "user") {
       setButtonText("hunter"); // 텍스트 변경
       setButtonColor("danger"); // 배경 색 변경
+      setImg("/img/newHunter.jpeg");
     } else {
       setButtonText("user"); // 텍스트 변경
       setButtonColor("primary"); // 배경 색 변경
+      setImg("/img/TRASHHUNTER.jpeg");
     }
   };
 
@@ -114,7 +117,7 @@ export default function MainPage() {
         style={{ position: "relative" }}
         onClick={() => navigate("/map")}
       >
-        <img src="/img/TRASHHUNTER.jpeg" alt="map" className="mapImg" />
+        <img src={`${imgPath}`} alt="map" className="mapImg"/>
       </div>
       {/* <div className="banner d-flex justify-content-between p-3">
         <p>
