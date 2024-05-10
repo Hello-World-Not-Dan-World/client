@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainPage.css";
-import { FiBell, FiAlignJustify } from "react-icons/fi";
+// import { FiBell, FiAlignJustify } from "react-icons/fi";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 import {useState} from "react";
@@ -16,7 +16,7 @@ export default function MainPage() {
   return (
     <div className="container">
       <div className="top">
-        <div className="left"></div>
+        <div className="left">Trash Hunter</div>
         <div className="right">
           <FiBell className="bell" />
           <FiAlignJustify className="menu" />
