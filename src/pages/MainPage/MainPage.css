@@ -40,6 +40,25 @@
   margin-right: 10px;
 }
 
+.button {
+  text-align: center;
+}
+
+.danger {
+  background-color: red;
+  border-radius: 30px;
+  width: 150px;
+  height: 50px;
+ }
+
+ .primary {
+  background-color: greenyellow;
+  border-radius: 30px;
+  width: 150px;
+  height: 50px;
+
+ }
+
 .myPage {
   width: 100%;
   height: 200px;
@@ -53,7 +72,7 @@
 
 .map {
   width: 100%;
-  height: 430px;
+  height: 420px;
 }
 
 .mapImg {

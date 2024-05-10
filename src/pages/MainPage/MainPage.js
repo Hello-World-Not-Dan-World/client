@@ -12,6 +12,20 @@ export default function MainPage() {
   const maxValue = 5000; // 최대 값
   const percentage = (value / maxValue) * 100; // 현재 값에 따른 퍼센티지 계산
 
+  const [buttonText, setButtonText] = useState("user"); // 버튼 텍스트 상태 관리
+  const [buttonColor, setButtonColor] = useState("primary"); // 버튼 배경 색깔 상태 관리
+
+  const handleClick = () => {
+    // 버튼 클릭 이벤트 처리
+    if (buttonText === "user") {
+      setButtonText("hunter"); // 텍스트 변경
+      setButtonColor("danger"); // 배경 색 변경
+    } else {
+      setButtonText("user"); // 텍스트 변경
+      setButtonColor("primary"); // 배경 색 변경
+    }
+  };
+
   return (
     <div className="container">
       <div className="top">
@@ -21,6 +35,12 @@ export default function MainPage() {
           <FiAlignJustify className="menu" />
         </div>
       </div>
+      <div className="button">
+        <button type="button" className={`${buttonColor}`} onClick={handleClick}>
+        {buttonText}
+        </button>
+      </div>
+      <div style={{ height: "20px" }}></div>
       <div className="myPage">
         <div className="d-flex justify-content-between align-items-center p-5">
           <p>
@@ -47,24 +67,21 @@ export default function MainPage() {
           ></div>
         </div>
       </div>
-      <div style={{ height: "15px" }}></div>
+      <div style={{ height: "20px" }}></div>
       <div
         className="map"
         style={{ position: "relative" }}
         onClick={() => navigate("/map")}
       >
         <img src="/img/TRASHHUNTER.jpeg" alt="map" className="mapImg" />
-        <p className="mapText">
-          쓰레기 확인하고 <br /> 지구를 구하러 가기
-        </p>
       </div>
-      <div className="banner d-flex justify-content-between p-3">
+      {/* <div className="banner d-flex justify-content-between p-3">
         <p>
           매해 전 세계에서 3억 4000만 톤의 플라스틱 제품이 생산된다. 이는
           뉴욕시의 고층 건물 전체를 채우고도 남는 양이다.{" "}
         </p>
         <img src="/img/wallE.png" alt="wallE" className="wallE" />
-      </div>
+      </div> */}
     </div>
   );
 }
