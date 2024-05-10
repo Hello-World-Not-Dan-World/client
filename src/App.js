@@ -8,11 +8,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/map" component={<Map/>}/>
         <Route path="/" element={<LoginPage />} />
+        <Route path="/map" element={<Map/>}/>
         <Route path="/main" element={<MainPage />} />
       </Routes>
-      <Map/>
     </div>
   );
 }
