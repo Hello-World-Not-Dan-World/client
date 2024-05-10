@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Main from "./pages/Main";
+import React, { useState } from "react";
+import Test from "./pages/Test";
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <Test />
     </div>
   );
 }
