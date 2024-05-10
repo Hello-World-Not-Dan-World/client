@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import "../Test.css";
+import "./LoginPage.css";
 
-export default function Test() {
+export default function LoginPage() {
   useEffect(() => {
     const signInBtn = document.getElementById("signIn");
     const signUpBtn = document.getElementById("signUp");

@@ -1,5 +1,4 @@
 import { React, useRef, useState } from "react";
-import "../App.css";
 
 function Main() {
   const videoRef = useRef();
