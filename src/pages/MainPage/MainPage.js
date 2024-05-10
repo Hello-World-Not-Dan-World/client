@@ -3,9 +3,40 @@ import "./MainPage.css";
 import { FiBell, FiAlignJustify } from "react-icons/fi";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function MainPage() {
+  useEffect(() => {
+    const postData = {
+      id: "user",
+    };
+    // console.log(JSON.stringify(postData));
+    fetch("http://43.201.66.4:3000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setValue(data.user);
+      })
+      .catch((err) => {
+        console.error(
+          "There was a problem with the fetch post operation: ",
+          err
+        );
+      });
+  }, []);
+
   const navigate = useNavigate();
 
   const [value, setValue] = useState(2000); // 초기값은 0으로 설정
@@ -48,23 +79,33 @@ export default function MainPage() {
           </p>
           <img src="/img/profile.png" alt="프로필 이미지" className="profile" />
         </div>
-        <div
-          style={{
-            width: "60%",
-            backgroundColor: "#ccc",
-            height: "20px",
-            borderRadius: "10px",
-            marginLeft: "20px",
-          }}
-        >
+        <div className="d-flex justify-content-between ">
           <div
             style={{
-              width: `${percentage}%`,
-              backgroundColor: "green",
-              height: "100%",
+              width: "60%",
+              backgroundColor: "#ccc",
+              height: "20px",
               borderRadius: "10px",
+              marginLeft: "20px",
             }}
-          ></div>
+          >
+            <div
+              style={{
+                width: `${percentage}%`,
+                backgroundColor: "green",
+                height: "100%",
+                borderRadius: "10px",
+              }}
+            ></div>
+          </div>
+          <div
+            style={{
+              marginRight: "50px",
+              fontSize: "25px",
+            }}
+          >
+            {value}
+          </div>
         </div>
       </div>
       <div style={{ height: "20px" }}></div>
