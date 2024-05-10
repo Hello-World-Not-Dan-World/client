@@ -2,12 +2,20 @@ import React from "react";
 import "./MainPage.css";
 // import { FiBell, FiAlignJustify } from "react-icons/fi";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
+import {useState} from "react";
 
-export default function mainPage() {
+export default function MainPage() {
+
+  const navigate = useNavigate();
+
+  const [value, setValue] = useState(2000); // 초기값은 0으로 설정
+  const maxValue = 5000; // 최대 값
+  const percentage = (value / maxValue) * 100; // 현재 값에 따른 퍼센티지 계산
+
   return (
     <div className="container">
       <div className="top">
-        {" "}
         <div className="left">Trash Hunter</div>
         <div className="right">
           <FiBell className="bell" />
@@ -21,10 +29,28 @@ export default function mainPage() {
           </p>
           <img src="/img/profile.png" alt="프로필 이미지" className="profile" />
         </div>
+        <div
+        style={{
+          width: '60%',
+          backgroundColor: '#ccc',
+          height: '20px',
+          borderRadius: '10px',
+          marginLeft: '20px',
+        }}
+      >
+        <div
+          style={{
+            width: `${percentage}%`,
+            backgroundColor: 'green',
+            height: '100%',
+            borderRadius: '10px',
+          }}
+        ></div>
       </div>
-      <br></br>
-      <div className="map" style={{ position: "relative" }}>
-        <img src="/img/map.jpeg" alt="map" className="mapImg" />
+      </div>
+      <div style={{ height: '10px' }}></div>
+      <div className="map" style={{ position: "relative" }} onClick={() => navigate('/map')}>
+        <img src="/img/TRASHHUNTER.jpeg" alt="map" className="mapImg"/>
         <p className="mapText">
           쓰레기 확인하고 <br /> 지구를 구하러 가기
         </p>
