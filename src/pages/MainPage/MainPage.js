@@ -1,12 +1,11 @@
 import React from "react";
 import "./MainPage.css";
-// import { FiBell, FiAlignJustify } from "react-icons/fi";
+import { FiBell, FiAlignJustify } from "react-icons/fi";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
-import {useState} from "react";
+import { useState } from "react";
 
 export default function MainPage() {
-
   const navigate = useNavigate();
 
   const [value, setValue] = useState(2000); // 초기값은 0으로 설정
@@ -30,27 +29,31 @@ export default function MainPage() {
           <img src="/img/profile.png" alt="프로필 이미지" className="profile" />
         </div>
         <div
-        style={{
-          width: '60%',
-          backgroundColor: '#ccc',
-          height: '20px',
-          borderRadius: '10px',
-          marginLeft: '20px',
-        }}
-      >
-        <div
           style={{
-            width: `${percentage}%`,
-            backgroundColor: 'green',
-            height: '100%',
-            borderRadius: '10px',
+            width: "60%",
+            backgroundColor: "#ccc",
+            height: "20px",
+            borderRadius: "10px",
+            marginLeft: "20px",
           }}
-        ></div>
+        >
+          <div
+            style={{
+              width: `${percentage}%`,
+              backgroundColor: "green",
+              height: "100%",
+              borderRadius: "10px",
+            }}
+          ></div>
+        </div>
       </div>
-      </div>
-      <div style={{ height: '10px' }}></div>
-      <div className="map" style={{ position: "relative" }} onClick={() => navigate('/map')}>
-        <img src="/img/TRASHHUNTER.jpeg" alt="map" className="mapImg"/>
+      <div style={{ height: "10px" }}></div>
+      <div
+        className="map"
+        style={{ position: "relative" }}
+        onClick={() => navigate("/map")}
+      >
+        <img src="/img/TRASHHUNTER.jpeg" alt="map" className="mapImg" />
         <p className="mapText">
           쓰레기 확인하고 <br /> 지구를 구하러 가기
         </p>
