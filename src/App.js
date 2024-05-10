@@ -1,6 +1,6 @@
-import { BrowserRouter } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Map from './component/Map.js';
+import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Map from "./component/Map.js";
 import MainPage from "./pages/MainPage/MainPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import Hunt from "./pages/HuntingPage/Hunt.js";
