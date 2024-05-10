@@ -1,0 +1,83 @@
+.container {
+  margin: auto;
+  /* background-image: url("../../../public/hunter.jpg"); */
+  border-radius: var(--button-radius);
+  box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+    0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+  height: 100vh;
+  max-width: 430px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.layout {
+  width: 430px;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 35px;
+}
+
+.top {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  margin: 10px;
+}
+
+.right {
+  margin: 10px;
+}
+
+.bell {
+  margin-right: 10px;
+}
+
+.myPage {
+  width: 100%;
+  height: 250px;
+  border-radius: 30px;
+  /* background-color: rgb(235, 235, 235); */
+}
+
+.profile {
+  width: 50px;
+}
+
+.map {
+  width: 100%;
+  height: 300px;
+}
+
+.mapImg {
+  width: 100%;
+  height: 300px;
+  border-radius: 30px;
+  opacity: 0.7;
+}
+
+.mapText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.banner {
+  width: 100%;
+  height: 100px;
+  background-color: aliceblue;
+}
+
+.wallE {
+}
