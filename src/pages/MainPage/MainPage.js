@@ -47,7 +47,7 @@ export default function MainPage() {
           ></div>
         </div>
       </div>
-      <div style={{ height: "10px" }}></div>
+      <div style={{ height: "15px" }}></div>
       <div
         className="map"
         style={{ position: "relative" }}
