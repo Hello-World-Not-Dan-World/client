@@ -9,7 +9,7 @@ export default function Hunt(){
             <div className = "phone">
                 <h1>민수민 님이 사냥 중입니다!</h1>
                 <img className = "cleaning" src={video}/>
-                <button className="complete" onClick={()=>{navigate('/map')}}>사냥 완료!</button>      
+                <button className="complete" onClick={()=>{navigate('/main')}}>사냥 완료!</button>      
             </div> 
         </div>
     )

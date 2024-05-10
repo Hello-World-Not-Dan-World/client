@@ -115,7 +115,7 @@ export default function MainPage() {
       <div
         className="map"
         style={{ position: "relative" }}
-        onClick={() => navigate("/map")}
+        onClick={() => navigate("/map", {state:{mode: buttonText}})}
       >
         <img src={`${imgPath}`} alt="map" className="mapImg"/>
       </div>

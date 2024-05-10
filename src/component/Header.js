@@ -7,7 +7,7 @@ export default function Header(){
         <section id="header">
             <div class="wrapper">     
                 <button class="title" onClick={()=>{
-                    navigate('/');
+                    navigate('/main');
                 }}><i class="fas fa-kiss-wink-heart"></i> home</button>
             </div>
         </section>

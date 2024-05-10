@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Container as MapDiv } from 'react-naver-maps';
-
+import { useLocation } from 'react-router-dom';
 import {
     NaverMap,
     Marker,
@@ -16,7 +16,10 @@ import { useNavigate } from "react-router-dom";
 import '../index.css';
 
 
+
 export default function Map(){
+    const location = useLocation();
+    const {mode} = location.state.mode;
     const mapRef = useRef(null);
     const navermaps = window.naver.maps;
     const lat = 37.24304373703529; // 위도 숫자로 넣어주기
