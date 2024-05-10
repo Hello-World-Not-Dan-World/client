@@ -1,17 +1,14 @@
-<<<<<<< HEAD
-import "./App.css";
-import Main from "./pages/Main";
 import React, { useState } from "react";
-import Test from "./pages/Test";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
   return (
     <div>
-      <Test />
       <Routes>
-        <Route index element={<MainPage />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/main" element={<MainPage />} />
       </Routes>
     </div>
   );
