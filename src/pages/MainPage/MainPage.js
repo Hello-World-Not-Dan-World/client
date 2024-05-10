@@ -7,9 +7,11 @@ export default function mainPage() {
   return (
     <div className="container">
       <div className="top">
+        {" "}
+        <div className="left">Trash Hunter</div>
         <div className="right">
-          {/* <FiBell className="bell" />
-          <FiAlignJustify className="menu" /> */}
+          <FiBell className="bell" />
+          <FiAlignJustify className="menu" />
         </div>
       </div>
       <div className="myPage">
@@ -17,9 +19,10 @@ export default function mainPage() {
           <p>
             김채은 님이 <br /> 지구를 아껴준 시간
           </p>
-          {/* <img src="/img/profile.png" alt="프로필 이미지" className="profile" /> */}
+          <img src="/img/profile.png" alt="프로필 이미지" className="profile" />
         </div>
       </div>
+      <br></br>
       <div className="map" style={{ position: "relative" }}>
         <img src="/img/map.jpeg" alt="map" className="mapImg" />
         <p className="mapText">
