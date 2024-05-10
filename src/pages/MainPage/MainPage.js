@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainPage.css";
-import { FiBell, FiAlignJustify } from "react-icons/fi";
+// import { FiBell, FiAlignJustify } from "react-icons/fi";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function mainPage() {
